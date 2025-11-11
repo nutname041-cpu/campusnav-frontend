@@ -6,9 +6,12 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      "/uploads": { target: "http://localhost:5050", changeOrigin: true },
+      "/uploads": { 
+        target: "https://campusnav-backend.onrender.com", 
+        changeOrigin: true 
+      },
       "/api": {
-        target: "http://localhost:5050",
+        target: "https://campusnav-backend.onrender.com",
         changeOrigin: true
       }
     }
